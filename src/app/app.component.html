@@ -1,8 +1,20 @@
 <mat-toolbar color="primary">
+  <nav>
   <button routerLink="/" mat-flat-button color="primary">Home</button>
   <button routerLink="/books" mat-flat-button color="primary">Books</button>
   <button routerLink="/contact" mat-flat-button color="primary">Contact</button>
+  </nav>
+
+  <button mat-icon-button color="secondary" [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+
 </mat-toolbar>
 <div>
   <router-outlet></router-outlet>
 </div>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>Logout</button>
+    <button mat-menu-item>Profile</button>
+  </mat-menu>
+
