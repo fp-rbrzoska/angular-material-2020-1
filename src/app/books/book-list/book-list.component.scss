@@ -1,8 +1,8 @@
 :host {
-  width: 100%
-}
+  width: 100%;
 
-::ng-deep .mat-list-item-content{
-  justify-content: space-between;
-  flex: 1;
+  ::ng-deep .mat-list-item-content {
+    justify-content: space-between;
+    flex: 1;
+  }
 }

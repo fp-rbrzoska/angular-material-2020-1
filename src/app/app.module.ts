@@ -9,12 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SharedModule } from './shared/shared.module';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatCardModule } from '@angular/material/card';
-import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -29,13 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
-    SharedModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatCardModule,
-    ReactiveFormsModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

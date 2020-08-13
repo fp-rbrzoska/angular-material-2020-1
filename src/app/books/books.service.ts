@@ -15,4 +15,8 @@ export class BooksService {
       }
     });
   }
+
+  getBookById(id): Observable<Book> {
+    return this.http.get<Book>('/api/books/' + id);
+  }
 }
