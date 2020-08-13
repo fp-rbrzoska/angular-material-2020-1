@@ -1,8 +1,8 @@
-<nav>
-  <a routerLink="/"> Home </a>
-  <a routerLink="/books"> Books </a>
-  <a routerLink="/contact"> Contact </a>
-</nav>
+<mat-toolbar color="primary">
+  <button routerLink="/" mat-flat-button color="primary">Home</button>
+  <button routerLink="/books" mat-flat-button color="primary">Books</button>
+  <button routerLink="/contact" mat-flat-button color="primary">Contact</button>
+</mat-toolbar>
 <div>
   <router-outlet></router-outlet>
 </div>
