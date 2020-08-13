@@ -1,6 +1,6 @@
 <h2>Books</h2>
 <mat-list role="list" *ngIf="(books$ | async) as books; else loader" class="w-100">
-  <mat-list-item *ngFor="let book of books" class="d-flex flex-row justify-content-between">
+  <mat-list-item *ngFor="let book of books">
     <div>{{book.title}}</div>
     <button mat-icon-button color="primary">
     <mat-icon>book</mat-icon>
