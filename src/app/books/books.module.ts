@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { BookDetailDialogComponent } from './book-detail-dialog/book-detail-dialog.component';
 
 
+
 @NgModule({
   declarations: [BookListComponent, BookDetailDialogComponent],
   imports: [

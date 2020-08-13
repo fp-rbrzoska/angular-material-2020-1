@@ -2,9 +2,13 @@
 <mat-list role="list" *ngIf="(books$ | async) as books; else loader" class="w-100">
   <mat-list-item *ngFor="let book of books">
     <div>{{book.title}}</div>
-    <button mat-icon-button color="primary" (click)="openBookDetails(book.id)">
-    <mat-icon >book</mat-icon>
-  </button></mat-list-item>
+    <div>
+      <button mat-icon-button color="primary" (click)="openBookDetails(book.id)">
+        <mat-icon >book</mat-icon>
+      </button><button mat-icon-button color="primary" (click)="copyDescription(book.longDescription)">
+        <mat-icon >content_copy</mat-icon>
+      </button>
+    </div></mat-list-item>
 </mat-list>
 <ng-template #loader>
   Loading...

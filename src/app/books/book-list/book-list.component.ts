@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Book } from 'src/app/models/book';
 import { BookDetailDialogComponent } from '../book-detail-dialog/book-detail-dialog.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 @Component({
   selector: 'app-book-list',
@@ -16,7 +17,7 @@ export class BookListComponent implements OnInit {
   openedBook: Book;
   books$: Observable<Book[]>;
   dialogRef: MatDialogRef<any>;
-  constructor(private bookService: BooksService, private dialog: MatDialog) {
+  constructor(private bookService: BooksService, private dialog: MatDialog, private clipboard: Clipboard) {
     this.books$ = this.bookService.getBooks();
    }
 
@@ -36,6 +37,10 @@ export class BookListComponent implements OnInit {
   closeBookDetails() {
     this.dialogRef.close();
     this.openedBook = null;
+  }
+
+  copyDescription(descr) {
+    this.clipboard.copy(descr);
   }
 
 }
