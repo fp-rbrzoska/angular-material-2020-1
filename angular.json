@@ -7,7 +7,14 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -66,7 +73,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fp-proj:build"
+            "browserTarget": "fp-proj:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -123,6 +131,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fp-proj"
+    }
+  },
+  "defaultProject": "fp-proj",
+  "cli": {
+    "analytics": false
+  }
 }

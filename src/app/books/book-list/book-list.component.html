@@ -1,0 +1,7 @@
+<h2>Books</h2>
+<div *ngIf="(books$ | async) as books; else loader">
+  <div *ngFor="let book of books">{{ book.title }}</div>
+</div>
+<ng-template #loader>
+  Loading...
+</ng-template>
